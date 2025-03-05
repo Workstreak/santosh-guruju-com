@@ -1,21 +1,37 @@
-import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import styles from '../assets/styles/Styles';
-import { Card } from '@mui/material';
+import React from "react";
+import dribbbleLogo1 from "../assets/images/dribbble-logo-1.svg";
+import envelopeOpen1 from "../assets/images/envelope-open-1.svg";
+import linkedinLogo1 from "../assets/images/linkedin-logo-1.svg";
+import logoInstagram1 from "../assets/images/logo-instagram-1.svg";
+import styles from "../assets/styles/Styles";
+import { View, Text, TouchableOpacity, Image } from 'react-native';
 
-export default Calendar = () => {
+export default Contact = () => {
   return (
-    <View style={styles.calendar}>
-      <Text style={styles.calendarTitle}>Mark Your Calendar - Collab with me!</Text>
-
-      <Text style={styles.calendarDescription}>
-        Join me exploring similar interests or for a talk to discuss your
-        passions and projects.
-      </Text>
-
-      <TouchableOpacity style={styles.calendarButton}>
-        <Text style={styles.calendarButtonText}>Add to Calendar</Text>
+    <View style={styles.contactContainer}>
+      <Text style={styles.sayHelloText}>Say hello and let's work together!</Text>
+      <View style={styles.emailTextbox}>
+        <Text style={styles.emailLabel}>Email</Text>
+        <Text style={styles.textWrapperEmail}>Your email address</Text>
+      </View>
+      <View style={styles.descriptionTextbox}>
+        <Text style={styles.descriptionTextWrapper}>Describe your project</Text>
+      </View>
+      <TouchableOpacity style={styles.contactButton}>
+        <Text style={styles.submitTextWrapper}>Submit</Text>
       </TouchableOpacity>
+      <View style={styles.socialIcons}>
+        <Image style={styles.socialIcon} source={logoInstagram1} />
+        <Image style={styles.socialIcon} source={dribbbleLogo1} />
+        <Image style={styles.socialIcon} source={linkedinLogo1} />
+        <Image style={styles.socialIcon} source={envelopeOpen1} />
+      </View>
+      <View style={styles.footer}>
+        <Text style={styles.footerText}>•Sitemap</Text>
+        <Text style={styles.footerText}>© 2024</Text>
+        <Text style={styles.footerText}>•Privacy</Text>
+        <Text style={styles.footerText}>•Terms</Text>
+      </View>
     </View>
   );
 };

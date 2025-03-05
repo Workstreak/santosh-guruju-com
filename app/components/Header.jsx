@@ -1,26 +1,26 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import style from '../assets/styles/Styles';
+import styles from '../assets/styles/Styles';
 
 export default Header = () => {
   return (
-    <View style={style.header}>
-      <Text style={style.headerTitle}>Santosh Guruju</Text>
-      <View style={style.headerMenu}>
-        <TouchableOpacity style = {style.headerMenuItem}>
-          <Text style={style.headerMenuItemSelectedText}>About me</Text>
+    <View style={styles.header}>
+      <Text style={styles.headerTitle}>Santosh Guruju</Text>
+      <View style={styles.headerMenu}>
+        <TouchableOpacity style={styles.headerMenuItem}>
+          <Text style={styles.headerMenuItemSelectedText}>About me</Text>
         </TouchableOpacity>
-        <TouchableOpacity style = {style.headerMenuItem}>
-          <Text style={style.headerMenuItemText}>Blog</Text>
+        <TouchableOpacity style={styles.headerMenuItem}>
+          <Text style={styles.headerMenuItemText}>Blog</Text>
         </TouchableOpacity>
-        <TouchableOpacity style = {style.headerMenuItem}>
-          <Text style={style.headerMenuItemText}>Projects</Text>
+        <TouchableOpacity style={styles.headerMenuItem}>
+          <Text style={styles.headerMenuItemText}>Projects</Text>
         </TouchableOpacity>
-        <TouchableOpacity style = {style.headerMenuItem}>
-          <Text style={style.headerMenuItemText}>Calendar</Text>
+        <TouchableOpacity style={styles.headerMenuItem}>
+          <Text style={styles.headerMenuItemText}>Calendar</Text>
         </TouchableOpacity>
-        <TouchableOpacity style = {style.headerMenuItem}>
-          <Text style={style.headerMenuItemText}>Contact</Text>
+        <TouchableOpacity style={styles.headerMenuItem}>
+          <Text style={styles.headerMenuItemText}>Contact</Text>
         </TouchableOpacity>
       </View>
     </View>

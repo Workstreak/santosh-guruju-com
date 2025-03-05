@@ -5,7 +5,7 @@ import arrowRight from '../assets/images/arrow-right.svg';
 
 const CustomButton = () => {
   return (
-    <TouchableOpacity style={styles.customButton}>
+    <TouchableOpacity style={styles.blogButton}>
       <Text style={styles.buttonTextWrapper}>See More</Text>
       <Image style={styles.arrowRight} source={arrowRight} />
     </TouchableOpacity>
