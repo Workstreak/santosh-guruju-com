@@ -1,5 +1,5 @@
 import React from "react";
-import dribbbleLogo1 from "../assets/images/dribbble-logo-1.svg";
+import xLogo from "../assets/images/x-logo.svg";
 import envelopeOpen1 from "../assets/images/envelope-open-1.svg";
 import linkedinLogo1 from "../assets/images/linkedin-logo-1.svg";
 import logoInstagram1 from "../assets/images/logo-instagram-1.svg";
@@ -16,7 +16,7 @@ export default Contact = () => {
           <Text style={styles.sayHelloText}>Say hello and let's work together!</Text>
           <View style={styles.socialIcons}> 
             <Image style={styles.socialIcon} source={logoInstagram1} />
-            <Image style={styles.socialIcon} source={dribbbleLogo1} />
+            <Image style={styles.xIcon} source={xLogo} />
             <Image style={styles.socialIcon} source={linkedinLogo1} />
             <Image style={styles.socialIcon} source={envelopeOpen1} />
           </View>

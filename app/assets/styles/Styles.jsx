@@ -3,6 +3,9 @@ import { StyleSheet, Dimensions } from 'react-native';
 
 const { width } = Dimensions.get('window');
 
+// Define a static font family
+const FONT_FAMILY = 'Archivo-Regular';
+
 export default styles = StyleSheet.create({
   appScrollView: {
     flexGrow: 1,
@@ -24,7 +27,7 @@ export default styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   headerTitle: {
-    fontFamily: 'Archivo',
+    fontFamily: FONT_FAMILY,
     fontSize: width > 768 ? 40 : 25,
     fontWeight: '400',
     color: '#171A1F',
@@ -47,15 +50,15 @@ export default styles = StyleSheet.create({
     margin: 10,
   },
   headerMenuItemSelectedText: {
-    fontFamily: 'Inter',
+    fontFamily: FONT_FAMILY,
     fontSize: width > 768 ? 14 : 10,
-    fontWeight: 1000,
+    fontWeight: '1000',
     color: '#636AE8', // primary-500
   },
   headerMenuItemText: {
-    fontFamily: 'Archivo',
+    fontFamily: FONT_FAMILY,
     fontSize: width > 768 ? 14 : 10,
-    fontWeight: 400,
+    fontWeight: '400',
   },
   content: {
     width: '100%',
@@ -86,14 +89,14 @@ export default styles = StyleSheet.create({
   greeting: {
     color: '#323842',
     margin: 10,
-    fontFamily: 'Archivo-Regular',
+    fontFamily: FONT_FAMILY,
     fontSize: width > 768 ? 30 : 15,
     textAlign: 'justify-left',
     flexWrap: 'wrap',
   },
   description: {
     margin: 10,
-    fontFamily: 'Archivo-Regular',
+    fontFamily: FONT_FAMILY,
     fontSize: width > 768 ? 16 : 8,
     textAlign: width > 768 ? 'left' : 'left',
     textAlign: 'justify-left',
@@ -109,7 +112,7 @@ export default styles = StyleSheet.create({
     borderEndStartRadius: width * 0.5,
     borderBottomEndRadius: width * 0.5,
   },
-  //blog
+  // Blog styles
   blog: {
     backgroundColor: '#ffffff',
     padding: 20,
@@ -119,7 +122,6 @@ export default styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   blogTabMenu: {
-    backgroundColor: '#7575ff',
     width: 'auto',
     height: 'auto',
     flexDirection: 'row',
@@ -129,14 +131,13 @@ export default styles = StyleSheet.create({
   blogTab: {
     width: width > 768 ? 200 : 'auto',
     padding: 5,
-    backgroundColor: '#fbc654',
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
     flexWrap: 'nowrap',
   },
   blogTabActive: {
-    borderBottomColor: '#FF6AE8',
+    borderBottomColor: '#636ae8',
     borderBottomWidth: 4,
     borderEndStartRadius: 3,
     borderBottomEndRadius: 3,
@@ -146,17 +147,15 @@ export default styles = StyleSheet.create({
     width: 20,
     justifyContent: 'center',
     alignContent: 'center',
-    tintColor: '#fffffff'
+    tintColor: '#636ae8',
   },
   blogTabText: {
     margin: 5,
-    color: '#565e6c',
-    fontFamily: 'Archivo-Regular',
+    color: '#636ae8',
+    fontFamily: FONT_FAMILY,
     textAlign: 'center',
     alignContent: 'center',
-    backgroundColor: '#00bd88',
   },
-  
   blogContent: {
     width: '100%',
     marginTop: 20,
@@ -165,22 +164,19 @@ export default styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     flexWrap: 'wrap',
-    backgroundColor: '#facb91',
   },
   blogImage: {
-    width: '30%',
+    width: '40%',
     margin: width > 768 ? 10 : 5,
-    aspectRatio: 1, // Maintain aspect ratio
     resizeMode: 'cover', // Scale down image
-    aspectRatio:1,
-    height: 'auto', // Ensure auto height
+    aspectRatio: 3/2,
+    height: '30%', // Ensure auto height
+    borderRadius: 12,
   },
- 
   blogTextContent: {
-    width: '60%',
+    width: '50%',
     padding: width > 768 ? 10 : 5,
     margin: width > 768 ? 10 : 5,
-    backgroundColor: '#78cc46',
     flexDirection: 'column',
     flexWrap: 'wrap',
     alignContent: 'left',
@@ -188,34 +184,34 @@ export default styles = StyleSheet.create({
   blogTitle: {
     color: '#323842',
     margin: width > 768 ? 10 : 5,
-    backgroundColor: '#993cca',
-    fontFamily: 'Archivo-Regular',
+    fontFamily: FONT_FAMILY,
     fontSize: width > 768 ? 30 : 15,
   },
   blogDescriptionText: {
     color: '#000000',
     margin: width > 768 ? 10 : 5,
     width: '90%',
-    fontFamily: 'Archivo-Regular',
+    fontFamily: FONT_FAMILY,
     textAlign: 'justify-left',
     fontSize: width > 768 ? 15 : 7,
     left: 'auto',
-    backgroundColor: '#fac900',
   },
   blogButton: {
     margin: width > 768 ? 10 : 5,
     padding: 10,
     backgroundColor: '#636ae8',
-    height: width > 768 ? 30 : 10,
+    height: width > 768 ? 40 : 10,
     width: width > 768 ? 120 : 100,
-    fontFamily: 'Archivo-Regular',
+    aspectRatio: 4/1,
+    fontFamily: FONT_FAMILY,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'left',
+    borderRadius: 5,
   },
   buttonTextWrapper: {
     color: '#ffffff',
-    fontFamily: 'Archivo-Regular',
+    fontFamily: FONT_FAMILY,
     fontSize: width > 768 ? 10 : 8,
   },
   arrowRight: {
@@ -237,49 +233,43 @@ export default styles = StyleSheet.create({
     width: '100%',
     padding: 20,
     flexDirection: 'row',
-    backgroundColor: '#ccab00',
     flexWrap: 'wrap',
   },
   projectTitle: {
     width: '40%',
     fontWeight: '800',
     fontSize: width > 768 ? 30 : 15,
-    fontFamily: 'Archivo-Regular',
+    fontFamily: FONT_FAMILY,
     alignContent: 'flex-end',
-    backgroundColor: '#dd0000',
   },
   projectDescription: {
     width: '60%',
     padding: 10,
     marginLeft: 'auto',
-    fontFamily: 'Archivo-Regular',
+    fontFamily: FONT_FAMILY,
     fontSize: width > 768 ? 16 : 8,
     textAlign: 'justify',
-    backgroundColor: '#acc000',
   },
   projectImageGridContainer: {
-    padding:10,
+    padding: 10,
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-evenly',
-    backgroundColor: '#cad012',
   },
   projectImageRowGrid: {
     width: '40%',
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-evenly',
-    backgroundColor: '#cad012',
   },
   projectImageColumnGrid: {
     width: '60%',
     flexDirection: 'column',
     flexWrap: 'wrap',
     justifyContent: 'space-evenly',
-    backgroundColor: '#cad012',
   },
   imageRow: {
-    flex:3,
+    flex: 3,
     margin: 10,
     width: '15%',
     height: width > 768 ? 560 : 200,
@@ -291,7 +281,7 @@ export default styles = StyleSheet.create({
     margin:10,
     width: 'auto',
     height: 'auto',
-    aspectRatio:1,
+    aspectRatio: 1,
     justifyContent: 'space-evenly',
     borderRadius: 12,
   },
@@ -299,27 +289,25 @@ export default styles = StyleSheet.create({
   contactContainer: {
     width: '100%',
     maxWidth: 1200,
-    backgroundColor: '#ffffff',
-    padding:20,
+    backgroundColor: '#1D2128',
+    padding: 20,
   },
-  contactView: {  
+  contactView: {
     width: '100%',
-    padding:20,
+    padding: 20,
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignContent: 'center',
-    backgroundColor: '#00aabc',
     flex: 3,
   },
   sayHelloView: {
     width: '50%',
-    backgroundColor: '#faac22',
     flexDirection: 'column',
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
   },
   sayHelloText: {
     color: '#ffffff',
-    fontFamily: 'Archivo-Regular',
+    fontFamily: FONT_FAMILY,
     padding: 20,
     fontSize: width > 768 ? 46 : 23,
     height: 150,
@@ -331,8 +319,8 @@ export default styles = StyleSheet.create({
     width: '40%',
     height: 'auto',
     marginLeft: 10,
-    flex: 3,   
-  },  
+    flex: 3,
+  },
   emailTextbox: {
     backgroundColor: '#fff',
     marginTop: 10,
@@ -364,14 +352,14 @@ export default styles = StyleSheet.create({
   emailOverlapGroup: {
     backgroundColor: '#fff',
     borderRadius: 6,
-    height: 61,
+    height: 60,
     position: 'relative',
     width: 589,
   },
   textWrapperEmail: {
     color: '#bcc1ca',
-    fontFamily: 'Inter-Regular',
-    fontSize: width > 768 ? 30 : 12,
+    fontFamily: FONT_FAMILY,
+    fontSize: width > 768 ? 20 : 12,
     fontWeight: '400',
     position: 'absolute',
     top: 15,
@@ -379,12 +367,21 @@ export default styles = StyleSheet.create({
   },
   emailLabel: {
     color: '#ffffff',
-    fontFamily: 'Inter-Regular',
+    fontFamily: FONT_FAMILY,
     fontSize: 18,
     fontWeight: '400',
     marginBottom: 10,
   },
-  
+  descriptionTextWrapper: {
+    color: '#bcc1ca',
+    fontFamily: FONT_FAMILY,
+    fontSize: width > 768 ? 20 : 12,
+    fontWeight: '400',
+    position: 'absolute',
+    top: 11,
+    left: 15,
+    width: 548,
+  },
   descriptionOverlap: {
     height: 135,
     position: 'relative',
@@ -405,16 +402,7 @@ export default styles = StyleSheet.create({
     position: 'relative',
     width: 589,
   },
-  descriptionTextWrapper: {
-    color: '#bcc1ca',
-    fontFamily: 'Inter-Regular',
-    fontSize: width > 768 ? 30 : 12,
-    fontWeight: '400',
-    position: 'absolute',
-    top: 11,
-    left: 15,
-    width: 548,
-  },
+ 
   resizingHandle: {
     height: 12,
     position: 'absolute',
@@ -423,7 +411,7 @@ export default styles = StyleSheet.create({
   },
   textWrapperMessage: {
     color: '#ffffff',
-    fontFamily: 'Inter-Regular',
+    fontFamily: FONT_FAMILY,
     fontSize: 18,
     fontWeight: '400',
     position: 'absolute',
@@ -446,7 +434,7 @@ export default styles = StyleSheet.create({
   },
   submitTextWrapper: {
     color: '#ffffff',
-    fontFamily: 'Inter-Regular',
+    fontFamily: FONT_FAMILY,
     fontSize: width > 768 ? 18 : 9,
     fontWeight: '400',
   },
@@ -487,7 +475,7 @@ export default styles = StyleSheet.create({
   },
   sitemapTextWrapper: {
     color: '#ffffff',
-    fontFamily: 'Inter-Regular',
+    fontFamily: FONT_FAMILY,
     fontSize: 14,
     fontWeight: '400',
     position: 'absolute',
@@ -496,7 +484,7 @@ export default styles = StyleSheet.create({
   },
   yearTextWrapper: {
     color: '#ffffff',
-    fontFamily: 'Inter-Regular',
+    fontFamily: FONT_FAMILY,
     fontSize: 14,
     fontWeight: '400',
     position: 'absolute',
@@ -505,7 +493,7 @@ export default styles = StyleSheet.create({
   },
   privacyTextWrapper: {
     color: '#ffffff',
-    fontFamily: 'Inter-Regular',
+    fontFamily: FONT_FAMILY,
     fontSize: 14,
     fontWeight: '400',
     position: 'absolute',
@@ -514,7 +502,7 @@ export default styles = StyleSheet.create({
   },
   termsTextWrapper: {
     color: '#ffffff',
-    fontFamily: 'Inter-Regular',
+    fontFamily: FONT_FAMILY,
     fontSize: 14,
     fontWeight: '400',
     position: 'absolute',
@@ -526,10 +514,16 @@ export default styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     marginBottom: 20,
+    alignContent: 'center',
+    alignItems: 'center',
   },
   socialIcon: {
-    height: 24,
-    width: 24,
+    height: 30,
+    width: 30,
+  },
+  xIcon: {
+    width: 20,
+    height: 20,
   },
   footer: {
     flexDirection: 'row',
@@ -537,7 +531,7 @@ export default styles = StyleSheet.create({
   },
   footerText: {
     color: '#ffffff',
-    fontFamily: 'Inter-Regular',
+    fontFamily: FONT_FAMILY,
     fontSize: 14,
     fontWeight: '400',
   },
@@ -552,7 +546,7 @@ export default styles = StyleSheet.create({
   },
   calendarTitle: {
     color: '#636ae8',
-    fontFamily: 'Archivo',
+    fontFamily: FONT_FAMILY,
     fontSize: 32,
     fontWeight: '400',
     textAlign: 'center',
@@ -560,7 +554,7 @@ export default styles = StyleSheet.create({
   },
   calendarDescription: {
     color: '#171a1f',
-    fontFamily: 'Inter',
+    fontFamily: FONT_FAMILY,
     fontSize: 16,
     fontWeight: '400',
     textAlign: 'center',
@@ -576,7 +570,7 @@ export default styles = StyleSheet.create({
   },
   calendarButtonText: {
     color: '#ffffff',
-    fontFamily: 'Inter',
+    fontFamily: FONT_FAMILY,
     fontSize: 18,
     fontWeight: '400',
   },
