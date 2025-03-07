@@ -10,32 +10,38 @@ import { Card } from '@mui/material';
 const Projects = () => {
   return (
     <Card style={styles.projects}>
-      <Text style={styles.projectTitle}>Projects</Text>
-      <Text style={styles.projectDescription}>
-        Duis nisi do exercitation in irure aliqua commodo nisi eu id
-        reprehenderit dolore fugiat consectetur irure labore est ea.
-      </Text>
+      <View style={styles.projectHeader}>
+        <Text style={styles.projectTitle}>Projects</Text>
+        <Text style={styles.projectDescription}>
+          Duis nisi do exercitation in irure aliqua commodo nisi eu id
+          reprehenderit dolore fugiat consectetur irure labore est ea.
+         </Text>
+      </View>
       <View style={styles.projectImageGridContainer}>
-        <Image
-          style={styles.projectImage}
-          source={imageP1}
-          resizeMode="cover"
-        />
-        <Image
-          style={styles.projectImage}
-          source={imageP2}
-          resizeMode="cover"
-        />
-        <Image
-          style={styles.projectImage}
-          source={imageP3}
-          resizeMode="cover"
-        />
-        <Image
-          style={styles.projectImage}
-          source={imageP4}
-          resizeMode="cover"
-        />
+        <View style={styles.projectImageRowGrid}>  
+          <Image
+            style={styles.imageRow}
+            source={imageP1}
+            resizeMode="cover"
+          />
+          <Image
+            style={styles.imageRow}
+            source={imageP2}
+            resizeMode="cover"
+          />
+        </View>
+        <View style={styles.projectImageColumnGrid}>  
+          <Image
+            style={styles.imageColumn}
+            source={imageP3}
+            resizeMode="cover"
+          />
+          <Image
+            style={styles.imageColumn}
+            source={imageP4}
+            resizeMode="cover"
+          />
+        </View>       
       </View>
     </Card>
   );

@@ -1,4 +1,4 @@
-import { height, padding } from '@mui/system';
+import { height, padding, textAlign } from '@mui/system';
 import { StyleSheet, Dimensions } from 'react-native';
 
 const { width } = Dimensions.get('window');
@@ -29,10 +29,8 @@ export default styles = StyleSheet.create({
     fontWeight: '400',
     color: '#171A1F',
     textAlign: width > 375 ? 'left' : 'center',
-    backgroundColor: '#2189fd',
     padding: 30,
     alignContent: 'center',
-    borderWidth:3,
     textAlign: 'center',
   },
   headerMenu: {
@@ -47,8 +45,6 @@ export default styles = StyleSheet.create({
   headerMenuItem: {
     padding: 10,
     margin: 10,
-    backgroundColor: '#fff000',
-    borderWidth:3,
   },
   headerMenuItemSelectedText: {
     fontFamily: 'Inter',
@@ -60,7 +56,6 @@ export default styles = StyleSheet.create({
     fontFamily: 'Archivo',
     fontSize: width > 768 ? 14 : 10,
     fontWeight: 400,
-    color: '#424955FF', // neutral-650
   },
   content: {
     width: '100%',
@@ -80,7 +75,6 @@ export default styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     flexWrap: 'wrap',
     alignContent: 'center',
-    backgroundColor: '#ff2342',
   },
   aboutMeIntro: {
     width: '60%',
@@ -88,21 +82,17 @@ export default styles = StyleSheet.create({
     padding: 10,
     flexDirection: 'column',
     flexWrap: 'nowrap',
-    backgroundColor: '#eaddcf',
   },
   greeting: {
     color: '#323842',
     margin: 10,
-    backgroundColor: '#aeafff',
     fontFamily: 'Archivo-Regular',
     fontSize: width > 768 ? 30 : 15,
     textAlign: 'justify-left',
     flexWrap: 'wrap',
   },
   description: {
-    color: '#323842',
     margin: 10,
-    backgroundColor: '#bbeeff',
     fontFamily: 'Archivo-Regular',
     fontSize: width > 768 ? 16 : 8,
     textAlign: width > 768 ? 'left' : 'left',
@@ -118,7 +108,6 @@ export default styles = StyleSheet.create({
     transform: [{ scaleY: 1.1 }], // Scale height by 25%
     borderEndStartRadius: width * 0.5,
     borderBottomEndRadius: width * 0.5,
-    borderWidth:3,
   },
   //blog
   blog: {
@@ -126,7 +115,6 @@ export default styles = StyleSheet.create({
     padding: 20,
     width: '100%',
     maxWidth: 1200,
-    marginVertical: 20,
     height: 'auto',
     flexWrap: 'wrap',
   },
@@ -134,43 +122,45 @@ export default styles = StyleSheet.create({
     backgroundColor: '#7575ff',
     width: 'auto',
     height: 'auto',
-    padding: 10,
     flexDirection: 'row',
-    alignContent: 'left',
-    justifyContent: 'space-evenly',
+    alignContent: 'center',
+    justifyContent: 'space-around',
   },
   blogTab: {
-    width: 'auto',
+    width: width > 768 ? 200 : 'auto',
     padding: 5,
-    margin: 5,
     backgroundColor: '#fbc654',
     alignItems: 'center',
-    width: 75,
-    flexWrap: 'wrap',
+    justifyContent: 'center',
+    flexDirection: 'row',
+    flexWrap: 'nowrap',
   },
   blogTabActive: {
     borderBottomColor: '#FF6AE8',
     borderBottomWidth: 4,
+    borderEndStartRadius: 3,
+    borderBottomEndRadius: 3,
   },
   blogTabIcon: {
-    height: 24,
-    width: 24,
+    height: 20,
+    width: 20,
+    justifyContent: 'center',
+    alignContent: 'center',
     tintColor: '#fffffff'
   },
   blogTabText: {
-    marginTop: 5,
+    margin: 5,
     color: '#565e6c',
     fontFamily: 'Archivo-Regular',
     textAlign: 'center',
+    alignContent: 'center',
     backgroundColor: '#00bd88',
   },
   
   blogContent: {
     width: '100%',
-    height: 'auto',
     marginTop: 20,
     marginBottom: 20,
-    transform: [{ scaleY: 1.0 }],
     padding: width > 768 ? 20 : 15,
     flexDirection: 'row',
     justifyContent: 'space-evenly',
@@ -181,7 +171,8 @@ export default styles = StyleSheet.create({
     width: '30%',
     margin: width > 768 ? 10 : 5,
     aspectRatio: 1, // Maintain aspect ratio
-    resizeMode: 'contain', // Scale down image
+    resizeMode: 'cover', // Scale down image
+    aspectRatio:1,
     height: 'auto', // Ensure auto height
   },
  
@@ -192,7 +183,6 @@ export default styles = StyleSheet.create({
     backgroundColor: '#78cc46',
     flexDirection: 'column',
     flexWrap: 'wrap',
-    justifyContent: 'top',
     alignContent: 'left',
   },
   blogTitle: {
@@ -238,122 +228,122 @@ export default styles = StyleSheet.create({
   projects: {
     backgroundColor: '#ffffff',
     padding: 20,
-    width: '90%',
+    width: '100%',
     maxWidth: 1200,
     marginVertical: 20,
+    flexWrap: 'nowrap',
+  },
+  projectHeader: {
+    width: '100%',
+    padding: 20,
+    flexDirection: 'row',
+    backgroundColor: '#ccab00',
+    flexWrap: 'wrap',
   },
   projectTitle: {
-    fontSize: 32,
+    width: '40%',
+    fontWeight: '800',
+    fontSize: width > 768 ? 30 : 15,
     fontFamily: 'Archivo-Regular',
-    marginBottom: 10,
+    alignContent: 'flex-end',
+    backgroundColor: '#dd0000',
   },
   projectDescription: {
-    color: '#000000',
-    fontFamily: 'Inter-Regular',
-    fontSize: 16,
-    marginBottom: 20,
+    width: '60%',
+    padding: 10,
+    marginLeft: 'auto',
+    fontFamily: 'Archivo-Regular',
+    fontSize: width > 768 ? 16 : 8,
+    textAlign: 'justify',
+    backgroundColor: '#acc000',
   },
   projectImageGridContainer: {
+    padding:10,
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'space-between',
+    justifyContent: 'space-evenly',
+    backgroundColor: '#cad012',
   },
-  projectImageRow: {
-    flex:2,
+  projectImageRowGrid: {
+    width: '40%',
     flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-evenly',
+    backgroundColor: '#cad012',
   },
-  projectImageColumn: {
-    flex:3,
+  projectImageColumnGrid: {
+    width: '60%',
     flexDirection: 'column',
+    flexWrap: 'wrap',
+    justifyContent: 'space-evenly',
+    backgroundColor: '#cad012',
   },
-  projectImage: {
-    width: '48%',
-    height: 200,
-    borderRadius: 12,
-    marginBottom: 10,
-  },
-  imageP1: {
+  imageRow: {
     flex:3,
-    height: 570,
+    margin: 10,
+    width: '15%',
+    height: width > 768 ? 560 : 200,
+    justifyContent: 'space-evenly',
     borderRadius: 12,
-    margin:5,
   },
-  imageP2: {  
+  imageColumn: {
     flex:3,
-    height: 570,
+    margin:10,
+    width: 'auto',
+    height: 'auto',
+    aspectRatio:1,
+    justifyContent: 'space-evenly',
     borderRadius: 12,
-    margin:5,
-  },
-  imageP3: {
-    flex:3,
-    width: 570,
-    height: 275,
-    borderRadius: 12,
-    margin:5,
-  },
-  imageP4: {
-    flex:3,
-    width: 570,
-    height: 275,
-    borderRadius: 12,
-    margin:5,
-  },
-  // calender
-  calendar: {
-    backgroundColor: '#fafafa',
-    padding: 20,
-    width: '90%',
-    maxWidth: 1200,
-    marginVertical: 20,
-    alignItems: 'center',
-  },
-  calendarTitle: {
-    color: '#636ae8',
-    fontFamily: 'Archivo',
-    fontSize: 32,
-    fontWeight: '400',
-    textAlign: 'center',
-    marginBottom: 20,
-  },
-  calendarDescription: {
-    color: '#171a1f',
-    fontFamily: 'Inter',
-    fontSize: 16,
-    fontWeight: '400',
-    textAlign: 'center',
-    marginBottom: 30,
-  },
-  calendarButton: {
-    backgroundColor: '#636ae8',
-    borderRadius: 6,
-    height: 52,
-    width: 178,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  calendarButtonText: {
-    color: '#ffffff',
-    fontFamily: 'Inter',
-    fontSize: 18,
-    fontWeight: '400',
   },
   //contact
   contactContainer: {
-    backgroundColor: '#000',
-    padding: 20,
-    width: '90%',
+    width: '100%',
     maxWidth: 1200,
-    marginVertical: 20,
+    backgroundColor: '#ffffff',
+    padding:20,
+  },
+  contactView: {  
+    width: '100%',
+    padding:20,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignContent: 'center',
+    backgroundColor: '#00aabc',
+    flex: 3,
+  },
+  sayHelloView: {
+    width: '50%',
+    backgroundColor: '#faac22',
+    flexDirection: 'column',
+    justifyContent: 'space-around'
   },
   sayHelloText: {
     color: '#ffffff',
     fontFamily: 'Archivo-Regular',
-    fontSize: 32,
+    padding: 20,
+    fontSize: width > 768 ? 46 : 23,
+    height: 150,
+    justifyContent: 'center',
+    textAlign: 'left',
     fontWeight: '400',
-    marginBottom: 20,
   },
+  emailViewContainer: {
+    width: '40%',
+    height: 'auto',
+    marginLeft: 10,
+    flex: 3,   
+  },  
   emailTextbox: {
     backgroundColor: '#fff',
+    marginTop: 10,
+    height: 50,
+    borderRadius: 6,
+    padding: 10,
+    marginBottom: 20,
+  },
+  descriptionTextbox: {
+    backgroundColor: '#fff',
+    height: 150,
     borderRadius: 6,
     padding: 10,
     marginBottom: 20,
@@ -381,11 +371,11 @@ export default styles = StyleSheet.create({
   textWrapperEmail: {
     color: '#bcc1ca',
     fontFamily: 'Inter-Regular',
-    fontSize: 18,
+    fontSize: width > 768 ? 30 : 12,
     fontWeight: '400',
     position: 'absolute',
     top: 15,
-    left: 0,
+    left: 15,
   },
   emailLabel: {
     color: '#ffffff',
@@ -394,12 +384,7 @@ export default styles = StyleSheet.create({
     fontWeight: '400',
     marginBottom: 10,
   },
-  descriptionTextbox: {
-    backgroundColor: '#fff',
-    borderRadius: 6,
-    padding: 10,
-    marginBottom: 20,
-  },
+  
   descriptionOverlap: {
     height: 135,
     position: 'relative',
@@ -423,11 +408,11 @@ export default styles = StyleSheet.create({
   descriptionTextWrapper: {
     color: '#bcc1ca',
     fontFamily: 'Inter-Regular',
-    fontSize: 18,
+    fontSize: width > 768 ? 30 : 12,
     fontWeight: '400',
     position: 'absolute',
     top: 11,
-    left: 16,
+    left: 15,
     width: 548,
   },
   resizingHandle: {
@@ -445,18 +430,24 @@ export default styles = StyleSheet.create({
     top: 0,
     left: 0,
   },
+  contactButtonView: {
+    backgroundColor: '#ffffff',
+    borderRadius: 6,
+    width: width > 768 ? 178 : 75,
+    alignItems: 'left',
+  },
   contactButton: {
     backgroundColor: '#636ae8',
     borderRadius: 6,
-    height: 52,
+    height: width > 768 ? 50 : 30,
+    width: width > 768 ? 178 : 75,
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 20,
   },
   submitTextWrapper: {
     color: '#ffffff',
     fontFamily: 'Inter-Regular',
-    fontSize: 18,
+    fontSize: width > 768 ? 18 : 9,
     fontWeight: '400',
   },
   logoInstagram: {
@@ -531,6 +522,7 @@ export default styles = StyleSheet.create({
     left: 273,
   },
   socialIcons: {
+    marginTop: 20,
     flexDirection: 'row',
     justifyContent: 'space-around',
     marginBottom: 20,
@@ -547,6 +539,45 @@ export default styles = StyleSheet.create({
     color: '#ffffff',
     fontFamily: 'Inter-Regular',
     fontSize: 14,
+    fontWeight: '400',
+  },
+  // calender
+  calendar: {
+    backgroundColor: '#fafafa',
+    padding: 20,
+    width: '90%',
+    maxWidth: 1200,
+    marginVertical: 20,
+    alignItems: 'center',
+  },
+  calendarTitle: {
+    color: '#636ae8',
+    fontFamily: 'Archivo',
+    fontSize: 32,
+    fontWeight: '400',
+    textAlign: 'center',
+    marginBottom: 20,
+  },
+  calendarDescription: {
+    color: '#171a1f',
+    fontFamily: 'Inter',
+    fontSize: 16,
+    fontWeight: '400',
+    textAlign: 'center',
+    marginBottom: 30,
+  },
+  calendarButton: {
+    backgroundColor: '#636ae8',
+    borderRadius: 6,
+    height: 52,
+    width: 178,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  calendarButtonText: {
+    color: '#ffffff',
+    fontFamily: 'Inter',
+    fontSize: 18,
     fontWeight: '400',
   },
 });

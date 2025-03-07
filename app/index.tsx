@@ -14,7 +14,7 @@ function App() {
         <AboutMe />
         <Blog />
         <Projects />
-        <Calendar />
+        {/* <Calendar /> */}
         <Contact />
       </View>
     </ScrollView>
