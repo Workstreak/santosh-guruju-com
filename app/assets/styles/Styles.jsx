@@ -4,7 +4,7 @@ import { StyleSheet, Dimensions } from 'react-native';
 const { width } = Dimensions.get('window');
 
 // Define a static font family
-const FONT_FAMILY = 'Archivo-Regular';
+const FONT_FAMILY = 'Areal';
 
 export default styles = StyleSheet.create({
   appScrollView: {
@@ -28,7 +28,7 @@ export default styles = StyleSheet.create({
   },
   headerTitle: {
     fontFamily: FONT_FAMILY,
-    fontSize: width > 768 ? 40 : 25,
+    fontSize: width > 768 ? 50 : 30,
     fontWeight: '400',
     color: '#171A1F',
     textAlign: width > 375 ? 'left' : 'center',
@@ -90,7 +90,7 @@ export default styles = StyleSheet.create({
     color: '#323842',
     margin: 10,
     fontFamily: FONT_FAMILY,
-    fontSize: width > 768 ? 30 : 15,
+    fontSize: width > 768 ? 40 : 20,
     textAlign: 'justify-left',
     flexWrap: 'wrap',
   },
@@ -104,11 +104,9 @@ export default styles = StyleSheet.create({
   profileImage: {
     marginVertical: 20,
     width: '30%',
-    height: 'auto',
-    aspectRatio: 0.8, // Maintain aspect ratio
+    height: '50%',
+    aspectRatio: 2/3, // Maintain aspect ratio
     resizeMode: 'cover', // Scale down image
-    height: 'auto', // Ensure auto height
-    transform: [{ scaleY: 1.1 }], // Scale height by 25%
     borderEndStartRadius: width * 0.5,
     borderBottomEndRadius: width * 0.5,
   },
