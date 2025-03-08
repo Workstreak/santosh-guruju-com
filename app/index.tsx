@@ -5,11 +5,13 @@ import Blog from './components/Blog';
 import Projects from './components/Projects';
 import Calendar from './components/Calender';
 import Contact from './components/Contact';
+import CodeEntryPopup from './components/CodeEntryPopup';
 import styles from "./assets/styles/Styles";
 import * as Font from 'expo-font';
 
 function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
     loadFonts().then(() => setFontsLoaded(true));
@@ -20,17 +22,24 @@ function App() {
   }
 
   return (
-    <ScrollView contentContainerStyle={styles.appScrollView}>
-      <View style={styles.appView}>
-        <AboutMe />
-        <Blog />
-        <Projects />
-        {/* <Calendar /> */}
-        <Contact />
-      </View>
-    </ScrollView>
+    <>
+      {!isAuthenticated && (
+        <CodeEntryPopup onCorrectCode={() => setIsAuthenticated(true)} />
+      )}
+      {isAuthenticated && (
+        <ScrollView contentContainerStyle={styles.appScrollView}>
+          <View style={styles.appView}>
+            <AboutMe />
+            <Blog />
+            <Projects />
+            {/* <Calendar /> */}
+            <Contact />
+          </View>
+        </ScrollView>
+      )}
+    </>
   );
-};
+}
 
 export default App;
 

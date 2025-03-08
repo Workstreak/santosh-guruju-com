@@ -572,5 +572,68 @@ export default styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '400',
   },
+
+  popUpcontainer: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+  },
+  popup: {
+    backgroundColor: 'white',
+    padding: width > 768 ? 40 : 20,
+    borderRadius: 30,
+    width: width > 768 ? '30%' : '80%',
+    alignItems: 'center',
+    maxWidth: 500, // Prevent popup from getting too wide on large screens
+  },
+  title: {
+    fontSize: width > 768 ? 24 : 18,
+    fontWeight: 'bold',
+    fontFamily: FONT_FAMILY,
+    marginBottom: width > 768 ? 20 : 15,
+    textAlign: 'center',
+  },
+  input: {
+    width: '100%',
+    height: width > 768 ? 50 : 40,
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 30,
+    paddingHorizontal: width > 768 ? 20 : 15,
+    marginBottom: width > 768 ? 15 : 10,
+    fontSize: width > 768 ? 18 : 16,
+  },
+  error: {
+    color: 'red',
+    marginBottom: width > 768 ? 15 : 10,
+    fontFamily: FONT_FAMILY,
+    fontSize: width > 768 ? 16 : 14,
+    textAlign: 'center',
+  },
+  button: {
+    backgroundColor: '#007AFF',
+    padding: width > 768 ? 15 : 12,
+    borderRadius: 30,
+    width: '100%',
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: width > 768 ? 18 : 16,
+    fontWeight: 'bold',
+    fontFamily: FONT_FAMILY,
+  },
+  welcomeImage: {
+    width: '100%',
+    height: width > 768 ? 200 : 150,
+    marginBottom: width > 768 ? 30 : 20,
+    maxHeight: 250, // Prevent image from getting too tall
+  },
 });
 
